@@ -30,7 +30,6 @@ Clone the repository:
 
 git clone https://github.com/Attar-Afrin/Personal_Portfolio.git
 
-
 Open index.html in your browser.
 
 No server setup is required since it is a static site.
@@ -38,7 +37,6 @@ No server setup is required since it is a static site.
 📦 Deployment
 
 🔗 Live Demo
-
-[Your Vercel URL] → e.g., https://portfolio-yourname.vercel.app
+https://personal-portfolio-eosin-phi.vercel.app/
 
 Made with ❤️ by Attar Afrin
