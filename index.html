@@ -47,27 +47,30 @@
         </div>
       </div>
       <div class="main-content">
-        <div id="navigation">
-          <div class="nav-wrapper">
-            <button class="theme-toggle" id="themeToggle">
-              <i class="fa-solid fa-moon"></i>
-            </button>
-
-            <div class="hamburger" id="hamburger">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-
-            <nav id="nav-menu">
-              <a href="#about" class="abt">About</a>
-              <a href="#skills">Skills</a>
-              <a href="#education">Education</a>
-              <a href="#projects">Projects</a>
-            </nav>
-          </div>
-        </div>
-
+        <nav class="dock-nav">
+          <a href="#about" class="dock-link active">
+            <i class="fa-solid fa-user"></i>
+            <span>About</span>
+          </a>
+          <a href="#skills" class="dock-link">
+            <i class="fa-solid fa-code"></i>
+            <span>Skills</span>
+          </a>
+          <a href="#education" class="dock-link">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>Education</span>
+          </a>
+          <a href="#projects" class="dock-link">
+            <i class="fa-solid fa-folder-open"></i>
+            <span>Projects</span>
+          </a>
+        
+          <button class="dock-theme" id="themeToggle">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+        </nav>
+        
+        
         <div id="about">
           <h2 class="heading">About Me</h2>
           <div class="line"></div>
@@ -209,42 +212,7 @@
     </div>
     <script
       src="https://kit.fontawesome.com/2c45916c53.js"
-      crossorigin="anonymous"
-    ></script>
-    <script>
-      const hamburger = document.getElementById("hamburger");
-      const navMenu = document.getElementById("nav-menu");
-      const navLinks = document.querySelectorAll("#nav-menu a");
-
-      hamburger.addEventListener("click", () => {
-        navMenu.classList.toggle("active");
-      });
-
-      navLinks.forEach((link) => {
-        link.addEventListener("click", () => {
-          navMenu.classList.remove("active");
-        });
-      });
-      const toggleBtn = document.getElementById("themeToggle");
-      const icon = toggleBtn.querySelector("i");
-
-      // Load saved theme
-      if (localStorage.getItem("theme") === "light") {
-        document.body.classList.add("light");
-        icon.classList.replace("fa-moon", "fa-sun");
-      }
-
-      toggleBtn.addEventListener("click", () => {
-        document.body.classList.toggle("light");
-
-        if (document.body.classList.contains("light")) {
-          icon.classList.replace("fa-moon", "fa-sun");
-          localStorage.setItem("theme", "light");
-        } else {
-          icon.classList.replace("fa-sun", "fa-moon");
-          localStorage.setItem("theme", "dark");
-        }
-      });
-    </script>
+      crossorigin="anonymous"></script>
+      <script src="./script.js"></script>
   </body>
 </html>
